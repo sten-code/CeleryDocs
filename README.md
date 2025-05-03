@@ -1,5 +1,8 @@
 # Celery Docs
 
+> **Warning**
+> This is a work in progress, some information may be wrong.
+
 This repository contains the documentation for Celery's API.
 
 ## Sources
