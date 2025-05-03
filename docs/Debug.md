@@ -215,7 +215,7 @@ An upvalue is a local variable used by an inner function, and is also called an 
 
 Read more on [Lua visibility rules](http://www.lua.org/manual/5.1/manual.html#2.6).
 
-> #### 🔎 Note
+> [!NOTE]
 > Some Luau optimizations automatically inline certain constants like strings and integers.\
 > They can be retrieved through [`debug.getconstant`](#debuggetconstant) instead.
 
@@ -259,7 +259,7 @@ function debug.getupvalues(func: function | number): {any}
 
 Returns a list of upvalues of the function or level `func`.
 
-> #### 🔎 Tip
+> [!TIP]
 > Traversing the table with `ipairs` is not recommended, as upvalues can be `nil` or skipped entirely.
 
 #### Parameters
@@ -286,15 +286,13 @@ end
 
 ### debug.setconstant
 
-`⛔ Exception`
-
 ```lua
 function debug.setconstant(func: function | number, index: number, value: any): ()
 ```
 
 Sets the constant at `index` in the function or level `func` to `value`.
 
-> #### ⛔ Exception
+> [!CAUTION]
 > The type of `value` must match the type of the constant at `index`.
 
 #### Parameters
@@ -318,15 +316,13 @@ foo() --> Hello, world!
 
 ### debug.setstack
 
-`⛔ Exception`
-
 ```lua
 function debug.setstack(level: number, index: number, value: any): ()
 ```
 
 Sets the register at `index` in the stack frame `level` to `value`.
 
-> #### ⛔ Exception
+> [!CAUTION]
 > The type of `value` must match the type of the register at `index`.
 
 #### Parameters
