@@ -251,7 +251,7 @@ print(debug.getconstant(foo, 3)) --> Hello, world!
 
 ---
 
-## debug.getupvalues
+### debug.getupvalues
 
 ```lua
 function debug.getupvalues(func: function | number): {any}
@@ -262,11 +262,11 @@ Returns a list of upvalues of the function or level `func`.
 > ### 🔎 Tip
 > Traversing the table with `ipairs` is not recommended, as upvalues can be `nil` or skipped entirely.
 
-### Parameters
+#### Parameters
 
  * `func` - A function or stack level.
 
-### Example
+#### Example
 
 ```lua
 local upvalue1, upvalue2 = function () end, function () end
@@ -284,7 +284,7 @@ end
 
 ---
 
-## debug.setconstant
+### debug.setconstant
 
 `⛔ Exception`
 
@@ -294,16 +294,16 @@ function debug.setconstant(func: function | number, index: number, value: any): 
 
 Sets the constant at `index` in the function or level `func` to `value`.
 
-> ### ⛔ Exception
+> #### ⛔ Exception
 > The type of `value` must match the type of the constant at `index`.
 
-### Parameters
+#### Parameters
 
  * `func` - A function or stack level.
  * `index` - The numerical index of the constant to set.
  * `value` - The value to set.
 
-### Example
+#### Example
 
 ```lua
 local function foo()
@@ -316,7 +316,7 @@ foo() --> Hello, world!
 
 ---
 
-## debug.setstack
+### debug.setstack
 
 `⛔ Exception`
 
@@ -326,16 +326,16 @@ function debug.setstack(level: number, index: number, value: any): ()
 
 Sets the register at `index` in the stack frame `level` to `value`.
 
-> ### ⛔ Exception
+> #### ⛔ Exception
 > The type of `value` must match the type of the register at `index`.
 
-### Parameters
+#### Parameters
 
  * `level` - The stack frame to look up.
  * `index` - The numerical index of the register to set.
  * `value` - The value to set.
 
-### Example
+#### Example
 
 ```lua
 local function foo()
@@ -348,7 +348,7 @@ print(foo()) --> Hello, world!
 
 ---
 
-## debug.setupvalue
+### debug.setupvalue
 
 ```lua
 function debug.setupvalue(func: function | number, index: number, value: any): ()
@@ -356,13 +356,13 @@ function debug.setupvalue(func: function | number, index: number, value: any): (
 
 Sets the upvalue at `index` in the function or level `func` to `value`.
 
-### Parameters
+#### Parameters
 
  * `func` - A function or stack level.
  * `index` - The numerical index of the upvalue to set.
  * `value` - The value to set.
 
-### Example
+#### Example
 
 ```lua
 local function somethingImportant()
