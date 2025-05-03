@@ -215,7 +215,7 @@ An upvalue is a local variable used by an inner function, and is also called an 
 
 Read more on [Lua visibility rules](http://www.lua.org/manual/5.1/manual.html#2.6).
 
-> ### 🔎 Note
+> #### 🔎 Note
 > Some Luau optimizations automatically inline certain constants like strings and integers.\
 > They can be retrieved through [`debug.getconstant`](#debuggetconstant) instead.
 
@@ -259,7 +259,7 @@ function debug.getupvalues(func: function | number): {any}
 
 Returns a list of upvalues of the function or level `func`.
 
-> ### 🔎 Tip
+> #### 🔎 Tip
 > Traversing the table with `ipairs` is not recommended, as upvalues can be `nil` or skipped entirely.
 
 #### Parameters
